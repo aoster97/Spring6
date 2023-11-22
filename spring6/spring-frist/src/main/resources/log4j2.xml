@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <loggers>
+        <!--
+        leveL指定日志级别，从低到高的优先级：
+        TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+        trace:追踪，是最低的日志级别，相当于追踪程序的执行
+        debug:调试，一般在开发中，都将其设置为最低的日志级别
+        info:信息，输出重要的信息，使用较多
+        warn:警告，输出警告的信息
+        error:输入错误信息
+        fatal:严重错误
+        -->
+    <root level="DEBUG">
+        <appender-ref ref="spring6log"/>
+        <appender-ref ref="RollingFile"/>
+        <appender-ref ref="log"/>
+    </root>
+
+
+
+
+
+
+
+
+    </loggers>
+</configuration>

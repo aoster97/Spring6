@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_21">
+      <change afterPath="$PROJECT_DIR$/spring-frist/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/TestUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/TestUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700635830273</updated>
       <workItem from="1700635832480" duration="41000" />
-      <workItem from="1700635877760" duration="7056000" />
+      <workItem from="1700635877760" duration="8086000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
