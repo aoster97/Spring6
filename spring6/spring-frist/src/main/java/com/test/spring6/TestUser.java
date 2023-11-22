@@ -29,7 +29,6 @@ public class TestUser {
         //Object o = clazz.newInstance();
         User user = (User) clazz.getDeclaredConstructor().newInstance();
         System.out.println(user);
-
     }
 
 }

@@ -54,6 +54,10 @@ public class TestUser {
 2,不用new的方式,还可以如何创建对象
   反射
 3,创建的对象放在哪里?
+通过反射创建出来的对象都储存在map里面Map<String, BeanDefinition> beanDefinitionMap中,以key,Value的方式存储
+key:唯一标识
+Value:类的定义(描述信息)
+  
   
 4,如何使用反射创建的对象
   * 加载bean.xml配置文件
@@ -61,9 +65,17 @@ public class TestUser {
   * 获取xml文件bean标签属性
   id属性值和class属性值
   *使用反射根据类全路径创建对象
-  
-  
-  
-
+  //反射创建对象
+    @Test
+    public void testUserObject1() throws Exception {
+        //获取类Class对象
+        Class clazz = Class.forName("com.test.spring6.User");
+        //调用方法创建对象
+        //Object o = clazz.newInstance();
+        User user = (User) clazz.getDeclaredConstructor().newInstance();
+        System.out.println(user);
+    }
 ```
+
+
 
