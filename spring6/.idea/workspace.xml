@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_21">
-      <change afterPath="$PROJECT_DIR$/spring-frist/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring6_log/app.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring6_log/test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-frist/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/TestUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/TestUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/target/classes/bean.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/target/classes/com/test/spring6/TestUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/target/classes/com/test/spring6/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -61,14 +74,15 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.13351136" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager" selected="JUnit.TestUser.testUserObject1">
+  <component name="RunManager" selected="JUnit.TestUser.testUserObject">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -127,8 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestUser.testUserObject1" />
         <item itemvalue="JUnit.TestUser.testUserObject" />
+        <item itemvalue="JUnit.TestUser.testUserObject1" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700635830273</updated>
       <workItem from="1700635832480" duration="41000" />
-      <workItem from="1700635877760" duration="8086000" />
+      <workItem from="1700635877760" duration="13492000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>

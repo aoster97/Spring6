@@ -16,13 +16,25 @@
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="log"/>
     </root>
-
-
-
-
-
-
-
-
     </loggers>
+
+    <appenders>
+        <!--输出日志信息到控制台-->
+        <console name="spring6log" target="SYSTEM_OUT">
+            <!--控制日志输出的格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss SSS} [%t] %-3level %logger{1024} -%msg%n"/>
+        </console>
+
+        <File name="log" fileName="/Volumes/prom/Spring6/spring6_log/test.log"  append="false">
+            <PatternLayout pattern="%d{HH:mm:ss SSS} %-5level %class{36} %L %M -%msg%xEx%n"/>
+        </File>
+
+        <RollingFile name="RollingFile" fileName="/Volumes/prom/Spring6/spring6_log/app.log"
+                     filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %L %M -%msg%xEx%n"/>
+            <SizeBasedTriggeringPolicy size="50 MB" />
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </appenders>
+
 </configuration>
