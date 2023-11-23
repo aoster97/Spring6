@@ -8,5 +8,5 @@
         id属性 :唯一标识
         class属性 : 要创建对象所在类的全路径(包名称 + 类名称)
     -->
-    <bean id="user" class="com.test.spring6.User"></bean>
+    <bean id="user" class="com.test.spring6.Iocxml.User"></bean>
 </beans>

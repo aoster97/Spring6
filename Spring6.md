@@ -135,13 +135,154 @@ FATAL:严重错误
 
 2.5.2 引入Log4j2依赖
 
+```maven
+dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.10.0</version>
+        </dependency>
 
-
-
-
-
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+```
 
 
 
 2.5.3加入日志配置文件
 
+```java
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <loggers>
+        <!--
+        leveL指定日志级别，从低到高的优先级：
+        TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+        trace:追踪，是最低的日志级别，相当于追踪程序的执行
+        debug:调试，一般在开发中，都将其设置为最低的日志级别
+        info:信息，输出重要的信息，使用较多
+        warn:警告，输出警告的信息
+        error:输入错误信息
+        fatal:严重错误
+        -->
+    <root level="DEBUG">
+        <appender-ref ref="spring6log"/>
+        <appender-ref ref="RollingFile"/>
+        <appender-ref ref="log"/>
+    </root>
+    </loggers>
+
+    <appenders>
+        <!--输出日志信息到控制台-->
+        <console name="spring6log" target="SYSTEM_OUT">
+            <!--控制日志输出的格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss SSS} [%t] %-3level %logger{1024} -%msg%n"/>
+        </console>
+
+        <File name="log" fileName="/Volumes/prom/Spring6/spring6_log/test.log"  append="false">
+            <PatternLayout pattern="%d{HH:mm:ss SSS} %-5level %class{36} %L %M -%msg%xEx%n"/>
+        </File>
+
+        <RollingFile name="RollingFile" fileName="/Volumes/prom/Spring6/spring6_log/app.log"
+                     filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %L %M -%msg%xEx%n"/>
+            <SizeBasedTriggeringPolicy size="50 MB" />
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </appenders>
+
+</configuration>
+```
+
+
+
+# 3、容器：IoC
+
+loC是Inversion of Control的简写，译为控制反转"，它不是一门技术，而是一种设计思想，是一个重要的面向对象编程法则，能够指导我们如何设计出松耦合、更优良的程序
+
+Spring通过IoC容器来管理所有==java对象的实例化和初始化==，控制对象与对象之间的依赖关系。我们将由IoC容器管理的java对象称为Spring Bean,它与使用关键字new创建的java对象没有任何区别。
+loC容器是Spring框架中最重要的核心组件之一，它贯穿了Spring从诞生到成长的整个过程.
+
+![截屏2023-11-23 09.38.16](./assets/截屏2023-11-23 09.38.16.png)
+
+![截屏2023-11-23 09.38.56](./assets/截屏2023-11-23 09.38.56.png)
+
+## 3.1、IoC容器
+
+#### 3.1.1、控制反转(IoC)
+
+* 控制反转是一种思想。
+* 控制反转是为了降低程序耦合度，提高程序扩展力。
+* 控制反转，反转的是什么？
+  * 将对象的创建权利交出去，交给第三方容器负责。
+  * 将对象和对象之间关系的维护权交出去，交给第三方容器负责。
+* 控制反转这种思想如何实现呢？
+  * DI(Dependency Injection):依赖注入
+
+#### 3.1.2、依赖注入
+
+Dl(Dependency Injection):依赖注入，依赖注入实现了控制反转的思想
+**依赖注入：**
+
+* **指Spring创建对象的过程中，将对象依赖属性通过配置进行注入**
+
+  
+
+依赖注入常见的实现方式包括两种：
+
+* 第一种：set注入
+* 第二种：构造注入
+
+
+
+所以结论是：IOC就是一种控制反转的思想，而DI是对IoC的一种具体实现。
+**Bean管理说的是：Bean对像的创建，以及Bean对象中属性的赋值（或者叫做Bean对象之间关系的维护）。**
+
+(对象的创建过程和属性的注入过程)
+
+#### 3.1.3、IoC容器在Spring的实现
+
+Spring的IoC容器就是loC思想的一个落地的产品实现。IoC容器中管理的组件也叫做bean。在创建bean之前，首先需要创建IoC容器。
+
+在创建bean之前，首先需要创建IoC容器。Spring提供了IoC容器的两种实现方式：
+①BeanFactory
+这是IoC容器的基本实现，是Spring内部使用的接口。面向Spring本身，不提供给开发人员使用。
+②ApplicationContext
+BeanFactory的子接口，提供了更多高级特性。面向Spring的使用者，几乎所有场合都使用ApplicationContext
+而不是底层的BeanFactory。
+③ApplicationContext的主要实现类
+
+Spring的IoC容器就是IoC思想的一个落地的产品实现。loC容器中理的组件也叫做bean。在创建bean之
+前，首先需要创建IoC容器。Spring提供了IoC容器的两种实现方式：
+①BeanFactory
+这是IoC容器的基本实现，是Spring内部使用的接口。面向Spring本身，不提供给开发人员使用。
+②ApplicationContext
+BeanFactory的子接口，提供了更多高级特性。面向Spring的使用者，几乎所有场合都使用ApplicationContext
+而不是底层的BeanFactory。
+③ApplicationContext的主要实现类
+
+![截屏2023-11-23 09.54.33](./assets/截屏2023-11-23 09.54.33.png)
+
+![截屏2023-11-23 09.57.33](./assets/截屏2023-11-23 09.57.33.png)
+
+
+
+## 3.2、基于XML管理bean
+
+## 3.3、基于注解管理bean(*)
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.1.3、IoC容器在Spring的实现

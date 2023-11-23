@@ -1,4 +1,4 @@
-package com.test.spring6;
+package com.test.spring6.Iocxml;
 
 public class User {
 
