@@ -417,9 +417,62 @@ public class Book {
 
 使用spring通过这两种方式
 
+* 依赖注入方式一,使用set方法注入
+
 第一步,创建类,定义属性,生成属性set方法
 
 ```java
+package com.test.spring6.iocxml.di;
+
+public class Book {
+
+    private String bname;
+    private String author;
+
+    public  Book() {
+    }
+
+    public Book(String bname, String author) {
+        this.bname = bname;
+        this.author = author;
+    }
+
+    public String getBname() {
+        return bname;
+    }
+
+    public void setBname(String bname) {
+        this.bname = bname;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bname='" + bname + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
+
+    // 原生方式注入属性
+    public static void main(String[] args) {
+        // set方法注入对象的属性
+        Book book = new Book();
+        book.setBname("java");
+        book.setAuthor("Ao");
+
+        // 通过构造器注入
+        Book book1 = new Book("C++","Ao");
+    }
+}
+
 package com.test.spring6.iocxml.di;
 
 import org.junit.Test;
@@ -434,11 +487,13 @@ public class TestBook {
                 new ClassPathXmlApplicationContext("bean-di.xml");
         Book book = context.getBean("book", Book.class);
         System.out.println(book);
-
-
     }
 }
+```
 
+第二步,在spring.xml配置配置文件配置
+
+```java
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -451,15 +506,135 @@ public class TestBook {
 </beans>
 ```
 
-第二步,在spring配置文件配置
-
-
-
 
 
 #### 3.2.4、实验三：依赖注入之构造器注入
 
+* 依赖注入方式二,使用构造器方法注入
+
+第一步, 创建类,定义属性,生成有参数构造的方法
+
+```java
+package com.test.spring6.iocxml.di;
+
+public class Book {
+
+    private String bname;
+    private String author;
+
+    public  Book() {
+    }
+		
+  	//有参数的构造方法
+    public Book(String bname, String author) {
+        this.bname = bname;
+        this.author = author;
+    }
+
+    public String getBname() {
+        return bname;
+    }
+
+    public void setBname(String bname) {
+        this.bname = bname;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bname='" + bname + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
+
+    // 原生方式注入属性
+    public static void main(String[] args) {
+        // set方法注入对象的属性
+        Book book = new Book();
+        book.setBname("java");
+        book.setAuthor("Ao");
+
+        // 通过构造器注入
+        Book book1 = new Book("C++","Ao");
+
+    }
+}
+
+```
+
+第二步,进行spring,xml文件的配置
+
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 2. 构造器方法完成注入-->
+    <bean name="bookCon" class="com.test.spring6.iocxml.di.Book">
+        <!--根据属性的名称进行注入-->
+        <constructor-arg name="bname" value="后端开发有参构造"></constructor-arg>
+        <constructor-arg name="author" value="Ao"></constructor-arg>
+    </bean>
+```
+
+
+
 #### 3.2.5、实验四：特殊值处理
+
+①字面量赋值
+
+什么是字面量？
+
+int a=10;
+
+声明一个变量a,初始化为10，此时a就不代表字母a了，而是作为一个变量的名字。当我们引用a的时候，我们实际上拿到的值是10而如果是带引号的：'a',那么它现在不是一个变量，它就是代表a这个字母本身，这就是字面量。所以字面量没有引申含义，就是我们看到的这个数据本身。
+
+```xml
+<!--使用value属性给bean的属性赋值时，spring会把value属性的值看做字面量-->
+<property name:="name"value:="张三"/>
+```
+
+
+
+②null值
+
+```xml
+<property name="name">
+  <nu11 />
+</property>
+```
+
+注意:
+
+```xml
+注意：
+<property name="name"value="nu11"></property>
+```
+
+以上的写法:为name所赋的值是字符串null
+
+
+
+③xml实体
+
+```xml
+
+```
+
+
+
+④CDATA节
+
+
 
 #### 3.2.6、实验五：为对象类型属性赋值
 
@@ -484,17 +659,5 @@ public class TestBook {
 
 
 ## 3.3、基于注解管理bean(*)
-
-
-
-
-
-
-
-
-
-
-
-
 
 3.1.3、IoC容器在Spring的实现

@@ -2,9 +2,24 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!-- set方法完成注入-->
+    <!-- 1. set方法完成注入-->
     <bean name="book" class="com.test.spring6.iocxml.di.Book">
-        <property name="bname" value="前端开发"></property>
+        <property name="bname" value="前端开发set方法注入"></property>
         <property name="author" value="Ao"></property>
+<!--        <property name="others">-->
+<!--&lt;!&ndash;            <null></null>&ndash;&gt;-->
+<!--            <null/>-->
+<!--        </property>-->
+<!--        因为是xml文件,所以大于号和小于号都不能很好的表示-->
+<!--        <property name="others" value="<>"></property>-->
+        <property name="others" value="a $lt; b || a $gt; b " ></property>
     </bean>
+
+    <!-- 2. 构造器方法完成注入-->
+    <bean name="bookCon" class="com.test.spring6.iocxml.di.Book">
+        <!--根据属性的名称进行注入-->
+        <constructor-arg name="bname" value="后端开发有参构造"></constructor-arg>
+        <constructor-arg name="author" value="Ao"></constructor-arg>
+    </bean>
+
 </beans>
