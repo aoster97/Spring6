@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_23">
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/Iocxml/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/TestUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/bean/PersonDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/bean/TestUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/bean/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/bean/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/di/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/di/TestBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-di.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/spring6.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/TestUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/Iocxml/TestUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/Iocxml/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/Iocxml/TestUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/iocxml/TestUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/Iocxml/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/java/com/test/spring6/iocxml/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-frist/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-frist/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/Iocxml/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring6_log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring6_log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/test.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
@@ -35,6 +51,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///Applications/apache-maven-3.6.2/repo/org/springframework/spring-context/6.0.2/spring-context-6.0.2.jar!/org/springframework/context/support/FileSystemXmlApplicationContext.class" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Applications/apache-maven-3.6.2/repo/org/springframework/spring-context/6.0.2/spring-context-6.0.2.jar!/org/springframework/context/support/ClassPathXmlApplicationContext.class" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Applications/apache-maven-3.6.2/repo/org/springframework/spring-beans/6.0.2/spring-beans-6.0.2.jar!/org/springframework/beans/factory/support/BeanDefinitionReader.class" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Applications/apache-maven-3.6.2/repo/org/springframework/spring-context/6.0.2/spring-context-6.0.2.jar!/org/springframework/context/annotation/AnnotationConfigApplicationContext.class" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Applications/apache-maven-3.6.2/repo/org/springframework/spring-context/6.0.2/spring-context-6.0.2.jar!/org/springframework/context/ApplicationContext.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -69,15 +92,58 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.13351136" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.TestUser.testUserObject">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestBook">
+    <configuration name="TestUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.TestUser" />
+      <module name="spring6-ioc-xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.spring6.iocxml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.bean.TestUserDao" />
+      <module name="spring6-ioc-xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.spring6.iocxml.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-ioc-xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.spring6.iocxml.di.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.spring6.iocxml.di" />
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.di.TestBook" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,12 +196,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestBook" />
+        <item itemvalue="Application.TestUserDao" />
+        <item itemvalue="Application.TestUser" />
         <item itemvalue="JUnit.TestUser.testUserObject" />
         <item itemvalue="JUnit.TestUser.testUserObject1" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="" />
@@ -144,7 +216,8 @@
       <option name="presentableId" value="Default" />
       <updated>1700635830273</updated>
       <workItem from="1700635832480" duration="41000" />
-      <workItem from="1700635877760" duration="14517000" />
+      <workItem from="1700635877760" duration="17611000" />
+      <workItem from="1700714975055" duration="4688000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
@@ -160,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700701464944</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2023_11_23">
+      <created>1700704764338</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700704764338</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

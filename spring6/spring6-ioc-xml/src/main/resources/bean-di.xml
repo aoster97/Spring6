@@ -2,11 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <!--完成user对象创建
-     bean标签
-        id属性 :唯一标识
-        class属性 : 要创建对象所在类的全路径(包名称 + 类名称)
-    -->
-    <bean id="user" class="com.test.spring6.iocxml.User"></bean>
+    <!-- set方法完成注入-->
+    <bean name="book" class="com.test.spring6.iocxml.di.Book">
+        <property name="bname" value="前端开发"></property>
+        <property name="author" value="Ao"></property>
+    </bean>
 </beans>

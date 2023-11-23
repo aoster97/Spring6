@@ -1,4 +1,4 @@
-package com.test.spring6.Iocxml;
+package com.test.spring6.iocxml;
 
 
 import org.junit.Test;
@@ -32,7 +32,7 @@ public class TestUser {
     @Test
     public void testUserObject1() throws Exception {
         //获取类Class对象
-        Class clazz = Class.forName("com.test.spring6.Iocxml.User");
+        Class clazz = Class.forName("com.test.spring6.iocxml.User");
         //调用方法创建对象
         //Object o = clazz.newInstance();
         User user = (User) clazz.getDeclaredConstructor().newInstance();
