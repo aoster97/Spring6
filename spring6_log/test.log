@@ -1,5 +1,4 @@
-16:52:10 830 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@495ee280
-16:52:10 933 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-di.xml]
-16:52:10 956 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'book'
-16:52:11 001 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'bookCon'
-16:52:11 012 WARN  org.springframework.core.LocalVariableTableParameterNameDiscoverer 123 inspectClass -Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.test.spring6.iocxml.di.Book
+22:41:29 747 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7fd50002
+22:41:30 010 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-ditest.xml]
+22:41:30 050 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'dept'
+22:41:30 101 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'emp'

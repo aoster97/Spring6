@@ -105,3 +105,23 @@
 2023-11-23 at 16:52:10 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'book'
 2023-11-23 at 16:52:11 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'bookCon'
 2023-11-23 at 16:52:11 CST WARN  org.springframework.core.LocalVariableTableParameterNameDiscoverer 123 inspectClass -Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.test.spring6.iocxml.di.Book
+2023-11-23 at 16:53:54 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@495ee280
+2023-11-23 at 16:53:54 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-di.xml]
+2023-11-23 at 16:53:54 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'book'
+2023-11-23 at 16:53:54 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'bookCon'
+2023-11-23 at 16:53:54 CST WARN  org.springframework.core.LocalVariableTableParameterNameDiscoverer 123 inspectClass -Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.test.spring6.iocxml.di.Book
+2023-11-23 at 16:54:30 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@495ee280
+2023-11-23 at 16:54:30 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-di.xml]
+2023-11-23 at 16:54:30 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'book'
+2023-11-23 at 16:54:30 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'bookCon'
+2023-11-23 at 16:54:30 CST WARN  org.springframework.core.LocalVariableTableParameterNameDiscoverer 123 inspectClass -Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.test.spring6.iocxml.di.Book
+2023-11-23 at 17:00:24 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@495ee280
+2023-11-23 at 17:00:24 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-di.xml]
+2023-11-23 at 17:00:24 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'book'
+2023-11-23 at 17:00:24 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'bookCon'
+2023-11-23 at 17:00:24 CST WARN  org.springframework.core.LocalVariableTableParameterNameDiscoverer 123 inspectClass -Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.test.spring6.iocxml.di.Book
+2023-11-23 at 22:36:42 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@28dcca0c
+2023-11-23 at 22:41:29 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7fd50002
+2023-11-23 at 22:41:30 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-ditest.xml]
+2023-11-23 at 22:41:30 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'dept'
+2023-11-23 at 22:41:30 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'emp'

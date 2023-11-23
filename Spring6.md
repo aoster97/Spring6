@@ -590,6 +590,98 @@ public class Book {
 
 #### 3.2.5、实验四：特殊值处理
 
+```java
+package com.test.spring6.iocxml.di;
+
+public class Book {
+
+    private String bname;
+    private String author;
+    private String others;
+
+    public Book() {
+        System.out.println("无参数构造执行了....");
+    }
+
+    public Book(String bname, String author) {
+        System.out.println("有参数构造执行了....");
+        this.bname = bname;
+        this.author = author;
+    }
+
+    // 原生方式注入属性
+    public static void main(String[] args) {
+        // set方法注入对象的属性
+        Book book = new Book();
+        book.setBname("java");
+        book.setAuthor("Ao");
+
+        // 通过构造器注入
+        Book book1 = new Book("C++", "Ao");
+
+    }
+
+    public String getBname() {
+        return bname;
+    }
+
+    public void setBname(String bname) {
+        this.bname = bname;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getOthers() { return others; }
+
+    public void setOthers(String others) { this.others = others; }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bname='" + bname + '\'' +
+                ", author='" + author + '\'' +
+                ", others='" + others + '\'' +
+                '}';
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 1. set方法完成注入-->
+    <bean name="book" class="com.test.spring6.iocxml.di.Book">
+        <property name="bname" value="前端开发set方法注入"></property>
+        <property name="author" value="Ao"></property>
+<!--        <property name="others">-->
+<!--&lt;!&ndash;            <null></null>&ndash;&gt;-->
+<!--            <null/>-->
+<!--        </property>-->
+<!--        因为是xml文件,所以大于号和小于号都不能很好的表示-->
+<!--        <property name="others" value="<>"></property>-->
+        <property name="others" value="&lt;&gt;" ></property>
+    </bean>
+
+    <!-- 2. 构造器方法完成注入-->
+    <bean name="bookCon" class="com.test.spring6.iocxml.di.Book">
+        <!--根据属性的名称进行注入-->
+        <constructor-arg name="bname" value="后端开发有参构造"></constructor-arg>
+        <constructor-arg name="author" value="Ao"></constructor-arg>
+    </bean>
+
+</beans>
+```
+
+
+
 ①字面量赋值
 
 什么是字面量？
@@ -627,16 +719,39 @@ int a=10;
 ③xml实体
 
 ```xml
-
+ <property name="others" value="&lt;&gt;" ></property>
 ```
 
 
 
 ④CDATA节
 
+```xml
+如果需要写<>还有CDATA的方法
+<property name="others">
+     <value><![CDATA[ a < b ]]></value>
+</property>
+```
 
+
+
+## 特殊类型属性注入
 
 #### 3.2.6、实验五：为对象类型属性赋值
+
+ 方式一：引用外部bean
+
+
+
+
+
+方式二：内部bean
+
+方式三：级联属性赋值
+
+
+
+
 
 #### 3.2.7、实验六：为数姐类型属性赋值
 

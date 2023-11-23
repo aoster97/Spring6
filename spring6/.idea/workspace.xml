@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_23">
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/Dept.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/Emp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/TestEmp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-ditest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/di/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/di/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/di/TestBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/di/TestBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-di.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-di.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-di.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-di.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring6_log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring6_log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/test.log" afterDir="false" />
     </list>
@@ -53,9 +56,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="2YWKKBXXS8DpjGwVtZN34rRupwo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -80,13 +80,26 @@
     <property name="project.structure.side.proportion" value="0.13351136" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.TestBook.testSetter">
+  <component name="RunManager" selected="Application.TestEmp">
     <configuration name="Book" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.di.Book" />
       <module name="spring6-ioc-xml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.test.spring6.iocxml.di.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEmp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.ditest.TestEmp" />
+      <module name="spring6-ioc-xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.spring6.iocxml.ditest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,22 +131,6 @@
       <option name="PACKAGE_NAME" value="com.test.spring6.iocxml.di" />
       <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.di.TestBook" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestBook.testCon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-ioc-xml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.spring6.iocxml.di.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.test.spring6.iocxml.di" />
-      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.di.TestBook" />
-      <option name="METHOD_NAME" value="testCon" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestEmp" />
         <item itemvalue="JUnit.TestBook.testSetter" />
         <item itemvalue="Application.Book" />
         <item itemvalue="JUnit.TestBook.testConstructor" />
         <item itemvalue="JUnit.TestBook" />
-        <item itemvalue="JUnit.TestBook.testCon" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +203,7 @@
       <updated>1700635830273</updated>
       <workItem from="1700635832480" duration="41000" />
       <workItem from="1700635877760" duration="17611000" />
-      <workItem from="1700714975055" duration="7281000" />
+      <workItem from="1700714975055" duration="12620000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
@@ -236,7 +233,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700722150372</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2023_11_23">
+      <created>1700729567479</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700729567479</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2023_11_23">
+      <created>1700729572778</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700729572778</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

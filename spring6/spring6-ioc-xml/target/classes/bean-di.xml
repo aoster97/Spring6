@@ -12,7 +12,10 @@
 <!--        </property>-->
 <!--        因为是xml文件,所以大于号和小于号都不能很好的表示-->
 <!--        <property name="others" value="<>"></property>-->
-        <property name="others" value="a $lt; b || a $gt; b " ></property>
+<!--        <property name="others" value="&lt;&gt;" ></property>-->
+            <property name="others">
+                <value><![CDATA[ a < b ]]></value>
+            </property>
     </bean>
 
     <!-- 2. 构造器方法完成注入-->

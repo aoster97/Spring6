@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    第一种方式：引入外肠ean
+    1. 创建两个类对象：dept和emp
+    2. 在emp bean标签里面，使用property引入dept bean
+    -->
+    <bean id="dept" class="com.test.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="安保部"></property>
+
+    </bean>
+
+    <bean id="emp" class="com.test.spring6.iocxml.ditest.Emp ">
+        <!--注入对象类型属性-->
+        <property name="dept" ref="dept"></property>
+        <!--普通类型的注入-->
+        <property name="ename" value="lucy"></property>
+        <property name="age" value="50"></property>
+
+    </bean>
+</beans>
