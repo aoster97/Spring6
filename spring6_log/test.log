@@ -1,4 +1,5 @@
-22:41:29 747 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7fd50002
-22:41:30 010 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-ditest.xml]
-22:41:30 050 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'dept'
-22:41:30 101 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'emp'
+23:12:01 954 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f1c29b7
+23:12:02 108 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 3 bean definitions from class path resource [bean-dimap.xml]
+23:12:02 137 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'student'
+23:12:02 242 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'teacher1'
+23:12:02 247 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'teacher2'

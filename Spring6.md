@@ -741,21 +741,192 @@ int a=10;
 
  方式一：引用外部bean
 
+```xml
+<bean id="dept" class="com.test.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="安保部"></property>
 
+    </bean>
 
+    <bean id="emp" class="com.test.spring6.iocxml.ditest.Emp ">
+        <!--注入对象类型属性-->
+        <property name="dept" ref="dept"></property>
+        <!--普通类型的注入-->
+        <property name="ename" value="lucy"></property>
+        <property name="age" value="50"></property>
+    </bean>
+```
 
+注意:如果引用外部bean没有使用ref,而是使用value就会报错,
+
+如果错把ref属性写成了value属性，会抛出异常：Caused by:java.lang.lllegalStateException:Cannotconvert value of type 'java.lang.String'to required type 'com.atguigu.spring6.bean.Dept'for propertyclazz':no matching editors or conversion strategy found意思是不能把String类型转换成我们要的Dept类型，
+
+说明我们使用value属性时，Spring.只把这个属性看做一个普通的字符串，不会认为这是一个bean的id.更不会根据它去找孕bean来冠值
 
 方式二：内部bean
 
+```xml
+<!--第二种方式：内部bean注入-->
+    <bean id="dept2" class="com.test.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="财务部"></property>
+    </bean>
+
+    <bean id="emp2" class="com.test.spring6.iocxml.ditest.Emp ">
+        <!--普通类型的注入-->
+        <property name="ename" value="mary"></property>
+        <property name="age" value="20"></property>
+        <!--使用内部bean的方式进行注入-->
+        <property name="dept">
+            <bean id="dept2" class="com.test.spring6.iocxml.ditest.Dept">
+                <property name="dname" value="财务部"></property>
+            </bean>
+        </property>
+    </bean>
+```
+
 方式三：级联属性赋值
 
+```xml
+<!--第三种方式 级联赋值-->
+    <bean id="dept3" class="com.test.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="技术研发部"></property>
+    </bean>
+    <bean id="emp3" class="com.test.spring6.iocxml.ditest.Emp">
+        <property name="ename" value="tom"></property>
+        <property name="age" value="30"></property>
+
+        <!--使用外部bean的方式引入-->
+        <property name="dept" ref="dept3"></property>
+        <property name="dept.dname" value="测试部"></property>
+    </bean>
+```
 
 
 
+#### 3.2.7、实验六：为数组类型属性赋值
 
-#### 3.2.7、实验六：为数姐类型属性赋值
+```xml
+<bean id="dept" class="com.test.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="技术部"></property>
+    </bean>
+
+    <bean id="emp" class="com.test.spring6.iocxml.ditest.Emp">
+        <!--普通类型属性-->
+        <property name="ename" value="lucy"></property>
+        <property name="age" value="20"></property>
+        <!--对象类型属性-->
+        <property name="dept" ref="dept"></property>
+        <!--数组类型属性-->
+        <property name="loves" >
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>敲代码</value>
+            </array>
+        </property>
+    </bean>
+```
+
+对象和test类
+
+```java
+package com.test.spring6.iocxml.ditest;
+
+import java.util.Arrays;
+
+//员工类
+public class Emp {
+
+    //员工属于某一个部门
+    //对象类型的属性
+    private Dept dept;
+    //员工名称
+    private String ename;
+    //员工年龄
+    private Integer age;
+    //员工爱好
+    private String[] loves;
+
+    public Dept getDept() {return dept; }
+    public void setDept(Dept dept) { this.dept = dept; }
+    public String getEname() { return ename; }
+    public void setEname(String ename) { this.ename = ename; }
+    public Integer getAge() { return age; }
+    public void setAge(Integer age) { this.age = age; }
+    public String[] getLoves() {return loves; }
+    public void setLoves(String[] loves) { this.loves = loves; }
+
+    public void work() {
+        System.out.println(ename + "emp work....." + age);
+        dept.info();
+        System.out.println(Arrays.toString(loves));
+    }
+}
+
+
+package com.test.spring6.iocxml.ditest;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestEmp {
+
+    public static void main(String[] args) {
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("bean-diarray.xml") ;
+        Emp emp = context.getBean("emp",Emp.class);
+        emp.work();
+
+    }
+}
+
+```
+
+
 
 #### 3.2.8、实验七：为集合类型属性赋值
+
+①为List集合类型属性赋值
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="empone" class="com.test.spring6.iocxml.ditest.Emp">
+        <property name="ename" value="lucy"></property>
+        <property name="age" value="20"></property>
+    </bean>
+
+    <bean id="emptwo" class="com.test.spring6.iocxml.ditest.Emp">
+        <property name="ename" value="mary"></property>
+        <property name="age" value="30"></property>
+    </bean>
+
+    <bean id="dept" class="com.test.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="技术部"></property>
+        <property name="empList">
+            <list>
+                <ref bean="empone"></ref>
+                <ref bean="emptwo"></ref>
+            </list>
+        </property>
+    </bean>
+</beans>
+```
+
+②为Map集合类型属性赋值
+
+```xml
+
+```
+
+③引用集合类型的bean
+
+```xml
+
+```
+
+
 
 #### 3.2.9、实验八：P命名空间
 
