@@ -917,7 +917,47 @@ public class TestEmp {
 ②为Map集合类型属性赋值
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    创建两个对象
+        注入普通类型属性
+        在学生bean注入map集合类型属性-->
 
+    <bean id="student" class="com.test.spring6.iocxml.dimap.Student">
+<!--        注入普通类型属性-->
+        <property name="sid" value="2000"></property>
+        <property name="sname" value="张三"></property>
+<!--        在学生bean注入map集合类型属性-->
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>10010</value>
+                    </key>
+                    <ref bean="teacher1"></ref>
+                </entry>
+                <entry>
+                    <key>
+                        <value>10086</value>
+                    </key>
+                    <ref bean="teacher2"></ref>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="teacher1" class="com.test.spring6.iocxml.dimap.Teacher">
+        <property name="teacherid" value="100"></property>
+        <property name="teachername" value="西门讲师"></property>
+    </bean>
+
+    <bean id="teacher2" class="com.test.spring6.iocxml.dimap.Teacher">
+        <property name="teacherid" value="200"></property>
+        <property name="teachername" value="上官讲师"></property>
+    </bean>
+</beans>
 ```
 
 ③引用集合类型的bean

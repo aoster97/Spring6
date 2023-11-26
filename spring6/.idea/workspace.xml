@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_23">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/Lesson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/TestStu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/TestDept.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-diarray.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-dilist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-dimap.xml" afterDir="false" />
+    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_24">
       <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/Dept.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/Dept.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/Emp.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/Emp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/TestEmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/TestEmp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-ditest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-ditest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-ditest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-ditest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Dept.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Dept.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Emp.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Emp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestEmp.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestEmp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/TestStu.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/TestStu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-diref.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-diref.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/TestStu.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/TestStu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring6_log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring6_log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/test.log" afterDir="false" />
     </list>
@@ -36,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -89,14 +76,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.13351136" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.test.spring6.iocxml.ditest" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestStu">
+  <component name="RunManager" selected="JUnit.TestStu.testStu">
     <configuration name="TestDept" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.ditest.TestDept" />
       <module name="spring6-ioc-xml" />
@@ -185,8 +172,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestStu" />
         <item itemvalue="JUnit.TestStu.testStu" />
+        <item itemvalue="JUnit.TestStu" />
         <item itemvalue="Application.TestDept" />
         <item itemvalue="Application.TestEmp" />
         <item itemvalue="JUnit.TestBook.testSetter" />
@@ -208,7 +195,7 @@
       <workItem from="1700635877760" duration="17611000" />
       <workItem from="1700714975055" duration="16464000" />
       <workItem from="1700790092205" duration="3631000" />
-      <workItem from="1700838829684" duration="489000" />
+      <workItem from="1700838829684" duration="3828000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
@@ -259,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700751580455</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2023_11_24">
+      <created>1700839506674</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700839506674</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +275,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2023_11_21" />
     <MESSAGE value="2023_11_23" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023_11_23" />
+    <MESSAGE value="2023_11_24" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023_11_24" />
   </component>
 </project>
