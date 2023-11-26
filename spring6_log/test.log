@@ -1,8 +1,3 @@
-00:19:58 953 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2e32ccc5
-00:19:59 119 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 2 bean definitions from class path resource [bean-jdbc.xml]
-00:19:59 146 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
-00:19:59 189 DEBUG org.springframework.core.env.PropertySourcesPropertyResolver 115 logKeyFound -Found key 'jdbc.url' in PropertySource 'localProperties' with value of type String
-00:19:59 190 DEBUG org.springframework.core.env.PropertySourcesPropertyResolver 115 logKeyFound -Found key 'jdbc.user' in PropertySource 'localProperties' with value of type String
-00:19:59 190 DEBUG org.springframework.core.env.PropertySourcesPropertyResolver 115 logKeyFound -Found key 'jdbc.password' in PropertySource 'localProperties' with value of type String
-00:19:59 191 DEBUG org.springframework.core.env.PropertySourcesPropertyResolver 115 logKeyFound -Found key 'jdbc.driver' in PropertySource 'localProperties' with value of type String
-00:19:59 196 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'druidDataSource'
+00:51:24 670 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5a59ca5e
+00:51:24 773 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 1 bean definitions from class path resource [bean-scope.xml]
+00:51:24 790 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'orders'

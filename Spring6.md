@@ -1069,13 +1069,59 @@ public class TestEmp {
 
 2、创建外部属性文件，propertiest格式定义数据信息：用户名密码地址等
 
-
+```properties
+jdbc.user=root
+jdbc.password=12345678
+jdbc.url="jdbc:mysql://localhost:3306/spring6_learn?serverTimezone=UTC&characterEncoding=utf-8&useUnicode=true&useSSL=false"
+jdbc.driver=com.mysql.cj.jdbc.Driver
+```
 
 3、创建spring配置文件，引入contexti命名空间引入属性文件，使用表达式完成注入
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--引入外部的属性文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+
+    <!--完成数据库信息的注入-->
+    <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource"> 
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.user}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+        <property name="driverClassName" value="${jdbc.driver}"></property>
+    </bean>
+
+</beans>
+```
 
 
 
 #### 3.2.11、实验十：bean的作用域
+
+1. 概念
+   在spring中可以通过配置bean标签的scope属性来指定bean的作用域范围，各取值含义参加下表：
+
+| 取值      | 含义                                   | 创建对象的时机  |
+| --------- | -------------------------------------- | --------------- |
+| singleton | 在IOC容器中,这个bean的对象始终为单实例 | IOC容器初始化时 |
+| prototype | 这个bean在ICO容器中有多个实例          | 获取bean时      |
+
+如果在WebApplicationContext环境下还会有另外几个作用域(但不常用):
+
+| 取值    | 含义                 |
+| ------- | -------------------- |
+| request | 在一个请求范围内有效 |
+| session | 在一个会话范围内有效 |
+
+
 
 #### 3.2.12、实验十一：bean生命周期
 

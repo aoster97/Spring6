@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_26">
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/TestJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/jdbc/TestJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-jdbc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/scope/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/scope/TestOrders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-scope.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +80,13 @@
       <recent name="com.test.spring6.iocxml.ditest" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestJdbc.demo2">
-    <configuration name="TestDept" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.ditest.TestDept" />
+  <component name="RunManager" selected="Application.TestOrders">
+    <configuration name="TestOrders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.scope.TestOrders" />
       <module name="spring6-ioc-xml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.spring6.iocxml.dimap.*" />
+          <option name="PATTERN" value="com.test.spring6.iocxml.scope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestOrders" />
         <item itemvalue="JUnit.TestJdbc.demo2" />
         <item itemvalue="JUnit.TestJdbc.testJdbc" />
         <item itemvalue="JUnit.TestStu.testStu" />
         <item itemvalue="JUnit.TestStu" />
-        <item itemvalue="Application.TestDept" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +195,7 @@
       <workItem from="1700635877760" duration="17611000" />
       <workItem from="1700714975055" duration="16464000" />
       <workItem from="1700790092205" duration="3631000" />
-      <workItem from="1700838829684" duration="5964000" />
+      <workItem from="1700838829684" duration="6846000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
@@ -262,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701007894321</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2023_11_26">
+      <created>1701015677499</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701015677499</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
