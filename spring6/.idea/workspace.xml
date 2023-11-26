@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_24">
+    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_26">
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/ditest/TestJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/jdbc/TestJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-jdbc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/jdbc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/TestStu.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/dimap/TestStu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-diref.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-diref.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/TestStu.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/TestStu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring6_log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring6_log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -83,22 +82,9 @@
       <recent name="com.test.spring6.iocxml.ditest" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestStu.testStu">
+  <component name="RunManager" selected="JUnit.TestJdbc.demo2">
     <configuration name="TestDept" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.ditest.TestDept" />
-      <module name="spring6-ioc-xml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.spring6.iocxml.dimap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestEmp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.ditest.TestEmp" />
       <module name="spring6-ioc-xml" />
       <extension name="coverage">
         <pattern>
@@ -123,17 +109,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBook.testSetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestJdbc.demo2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring6-ioc-xml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.spring6.iocxml.di.*" />
+          <option name="PATTERN" value="com.test.spring6.iocxml.jdbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.test.spring6.iocxml.di" />
-      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.di.TestBook" />
-      <option name="METHOD_NAME" value="testSetter" />
+      <option name="PACKAGE_NAME" value="com.test.spring6.iocxml.jdbc" />
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.jdbc.TestJdbc" />
+      <option name="METHOD_NAME" value="demo2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJdbc.testJdbc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-ioc-xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.spring6.iocxml.ditest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.spring6.iocxml.ditest" />
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.ditest.TestJdbc" />
+      <option name="METHOD_NAME" value="testJdbc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestJdbc.demo2" />
+        <item itemvalue="JUnit.TestJdbc.testJdbc" />
         <item itemvalue="JUnit.TestStu.testStu" />
         <item itemvalue="JUnit.TestStu" />
         <item itemvalue="Application.TestDept" />
-        <item itemvalue="Application.TestEmp" />
-        <item itemvalue="JUnit.TestBook.testSetter" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +197,7 @@
       <workItem from="1700635877760" duration="17611000" />
       <workItem from="1700714975055" duration="16464000" />
       <workItem from="1700790092205" duration="3631000" />
-      <workItem from="1700838829684" duration="3828000" />
+      <workItem from="1700838829684" duration="5964000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
@@ -253,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700839506674</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2023_11_26">
+      <created>1701007894321</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701007894321</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +285,7 @@
     <MESSAGE value="2023_11_21" />
     <MESSAGE value="2023_11_23" />
     <MESSAGE value="2023_11_24" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023_11_24" />
+    <MESSAGE value="2023_11_26" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023_11_26" />
   </component>
 </project>

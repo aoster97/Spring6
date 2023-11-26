@@ -963,14 +963,117 @@ public class TestEmp {
 ③引用集合类型的bean
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+    <!--
+        1, 创建三个对象
+        2, 注入普通类型属性
+        3, 使用utiL:类型定义
+        4, 在学生bean引入utiL:类型定义bean,完成ist、map类型属性注入
+        -->
 
+
+    <bean id="student" class="com.test.spring6.iocxml.dimap.Student">
+        <property name="sid" value="10000"></property>
+        <property name="sname" value="lucy"></property>
+        <!--注入list,map类型属性-->
+        <property name="lessonList" ref="lessonList"></property>
+        <property name="teacherMap" ref="teacherMap"></property>
+    </bean>
+
+    <util:list id="lessonList">
+        <ref bean="lessonone"></ref>
+        <ref bean="lessontwo"></ref>
+    </util:list>
+
+    <util:map id="teacherMap">
+        <entry>
+            <key>
+                <value>10010</value>
+            </key>
+            <ref bean="teacherone"></ref>
+        </entry>
+        <entry>
+            <key>
+                <value>10086</value>
+            </key>
+            <ref bean="teachertwo"></ref>
+        </entry>
+    </util:map>
+
+    <bean id="lessonone" class="com.test.spring6.iocxml.dimap.Lesson">
+        <property name="lessonName" value="java开发"></property>
+    </bean>
+    <bean id="lessontwo" class="com.test.spring6.iocxml.dimap.Lesson">
+        <property name="lessonName" value="前端开发"></property>
+    </bean>
+
+    <bean id="teacherone" class="com.test.spring6.iocxml.dimap.Teacher">
+        <property name="teacherid" value="100"></property>
+        <property name="teachername" value="西门讲师"></property>
+    </bean>
+    <bean id="teachertwo" class="com.test.spring6.iocxml.dimap.Teacher">
+        <property name="teacherid" value="200"></property>
+        <property name="teachername" value="欧阳讲师"></property>
+    </bean>
+
+
+</beans>
 ```
 
 
 
 #### 3.2.9、实验八：P命名空间
 
+```xml
+ <!--p命名空间注入-->
+    <bean id="studentp" class="com.test.spring6.iocxml.dimap.Student"
+        p:sid="100" p:sname="mary" p:lessonList-ref="lessonList" p:teacherMap-ref="teacherMap">
+    </bean>
+```
+
+
+
 #### 3.2.10、实验九：引入外部属性文件
+
+在实际的使用过程中,会有很多bean的创建和依赖注入,之后的管理会很不方便,把一定的固定值写到外部文件中, 引入外部文件完成注入,管理的时候只需要修改外部文件,不需要修改spring中的插入文件
+
+
+
+引入外部属性文件实现步骤: 
+
+1、引入数据库相关依赖
+
+```xml
+<!--My5QL驱动-->
+	<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.30</version>
+</dependency>
+<!--数据源-->
+<dependency>
+  <groupId>com.alibaba</groupId>
+  <artifactId>druid</artifactId>
+  <version>1.0.31</version>
+</dependency>
+```
+
+2、创建外部属性文件，propertiest格式定义数据信息：用户名密码地址等
+
+
+
+3、创建spring配置文件，引入contexti命名空间引入属性文件，使用表达式完成注入
+
+
 
 #### 3.2.11、实验十：bean的作用域
 
