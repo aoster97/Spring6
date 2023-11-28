@@ -1,11 +1,183 @@
-入门开发案例
+# SPRING6
+
+2022年11月，Spring6正式版本发布，标志着一个新的时代的到来，本套课程正是基于这个背景进行录制，课程采用Spring6最新发布的正式版本
+
+
+
+Spring框架是一款极其优秀的轻量级开源框架，为了解决企业应用开发的复杂性而出现。Spring框架的用途不仅仅限于服务器端的开发，从简单性、可测试性和松耦合性角度而言，绝大部分Java应用都可以从Spring中受益。Spring框架凭借其强大的功能和优良的性能，在企业开发中被广泛应用
+
+掌握Java基础知识（特别是反射）
+掌握Java注解
+掌握XⅪML
+掌握Maven
+
+
+
+Spring6框架
+第一章概述
+
+第二章入门
+
+第三章容器：IOC
+
+==第四章原理：手写IOC==
+
+==第五章  面向切面：AOP==
+
+第六章单元测试：JUNIT
+
+第七章 :事务
+
+第八章  资源操作：Resources
+
+第九章 国际化：i18n
+
+第十章数据校验：Validation
+
+第十一章 ==提前编译：AOT==
+
+
+# 第一章概述
+
+### 1.1、Spring什么?
+
+Spring是一款主流的Java EE轻量级开源涯架，Spring由Spring之父Rod Johnson提出并创立，其目的是用于简化Java企业级应用的开发难度和开发周期。Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松偶合的角度而言，任何java应用都可以从Spring中受益。Spring框架除了自己提供功能外，还提供整合其他技术和框架的能力，
+
+Spring自诞生以来备受青睐，一直被广大开发人员作为Java企业级应用程序开发的首选。时至今日，Spring俨然成为了Java EE代名词，成为了构建Java EE应用的事实标准
+自2004年4月，Spring1.0板本正式发布以来，Spring已经步入到了第6个大版本，也就是Spring6。本课程采用Spring当前最新发布的正式版本6.0.2.
+
+
+
+### 1.2、Spring的狭义和广义
+
+在不同的语境中，Spring所代表的含义是不同的。下面我们就分别从“广义“和"狭义"两个角度，对Spring进行介绍。
+
+* 广义的Spring:Spring技术栈
+  广义上的Spring泛指以Spring Framework为核心的Spring技术栈。
+  经过十多年的发展，Spring已经不是一个单纯的应用框架，而是逐渐发展成为一个由多个不同子项目（模块）组成的成熟技术，如Spring Framework、Spring MVC、SpringBoot、.Spring Cloud、Spring Data , Spring Security等，其中Spring Framework是其他子项目的基础.
+  这些子项目通盖了从企业级应用开发到云计算等各方面的内容，能够帮助开发人员解决软件发展过程中不断产生的各种实际问题，给开发人员带来了更好的开发体验。
+
+* 狭义的Spring:Spring Framework
+  狭义的Spring特指Spring Framework, 通常我们将它称为Spring框架，
+  Spring框架是一个分层的、面向切面的ava应用程序的一站式轻量级解决方案，它是Spring技术栈的核心和基础，是为了解决企业级应用开发的复杂性而创建的.
+
+  Spring有两个最核心模块：IoC和AOP。
+
+  * IoC:==Inverse of Control的简写，译为"控制反转"==，指把创建对象过程交给Spring进行管理。
+  * AOP : Aspect Oriented Programming的简写，译为"面向切面编程"。AOP用来封装多个类的公共行为，将那些与业务无关，却为业务模块所共同调用的逻辑封装起来，减少系统的重复代码，降低模块间的耦合度。另外，AOP还解决一些系统层面上的问题，比如日志、事务、权限等，
+
+
+
+### 1.3、Spring Framework特点
+
+* 非侵入式：使用Spring Framework开发应用程序时，Spring对应用程序本身的结构影响非常小。==对可以做到零污染==；对功能性组件色只需要使用几个简单的注解进行标记，完全不会破坏原有结构，反而能将组件结构进一步简化。这就使得基于Spring Framework开发应用程序时结构清晰、简洁优雅.
+
+  
+
+* 控制反转：IOC一一inversion of Control,割转资源获取方向。把自己创建资源、向环境索取资源变成环境将资源准备好，我们享受资源注入。
+
+
+
+* 面向切面编程：AOP一一Aspect Oriented Programming,在不修改源代码的基础上增强代码功能.
+
+
+
+* 容器：Spring IOC是一个容器，因为它包含并且管理组件对象的生命周期。组件享受到了容器化的管理，替程序员屏蔽了组件创建过程中的大量细节，极大的降低了使用门槛，大幅度提高了开发效率。
+
+
+
+* 组件化：Spring实现了使用简单的组件配置组合成一个复杂的应用。在Spring中可以使用XML和Java注解组合这些对象，这使得我们可以基于一个个功能明确、边界清晰的组件有条不素的搭建超大型复杂应用系统
+
+
+
+* 一站式：在IOC和AOP的基础上可以整合各种企业应用的开源框架和优秀的第三方类库，而且Spring旗下的项目已经覆盖了广泛领域，很多方面的功能性需求可以在Spring Framework的基础上全部使用Spring来实现
+
+
+
+
+
+### 1.4、Spring模块组成
+
+![image-20231122000731692](./assets/image-20231122000731692.png)
+
+![image-20231122001254936](./assets/image-20231122001254936.png)
+
+①Spring Core(核心容器)
+spring core提供了IOC,Dl,Bean配置装载创建的核心实现。核心概念：Beans、BeanFactory、BeanDefinitions、ApplicationContext.
+
+* spring-core:IOC和Dl的基本实现
+
+* spring-beans:BeanFactory和Bean的装配管理(BeanFactory)
+
+* spring-context:Spring context.上下文，即IOC容器(AppliactionContext)
+
+* spring-expression:spring表达式语言
+
+  
+
+②Spring AOP
+
+* spring-aop:面向切面偏编程的应用模块，整合ASM,CGLib,JDK Proxy
+* spring-aspects:集成AspecJ,AOP应用框架
+* spring-instrument:动态Class Loading模块
+
+
+
+3.Spring Data Access
+
+* spring-jdbc:spring对JDBC的封装，用于简化jdbc操作
+
+* spring-orm:java对象与数据库数据的映射框架
+
+* spring-oxm:对像与xml文件的映射框架
+
+* spring-jms:Spring对 Java Message Service(java消息服务)的封装，用于服务之间相互通信
+
+* spring-tx :spring jdbc事务管理
+
+  
+
+④Spring Web
+
+* spring-web:最基础的web支持，建立于spring-context之上，通过servlet或listener来切始化lOC容器
+* spring-webmvc:实现web mvc
+* spring-websocket:与前端的全双工通信协议
+* spring-webflux:Spring5.O提供的，用于取代传统ava servlet,非阻塞式Reactive Web框架，异步，非阻塞，事件驱动的服务
+
+
+
+⑤Spring Message
+
+* Spring-messaging:  spring4.0提供的，为Spring集成一些基础的报文传送服务
+
+
+
+⑥Spring test
+
+* spring-test:集成测试支持，主要是对junit的封装
+
+
+
+### 1.5、Spring6特点
+
+### 1.5.1、版本要求
+
+(1) Spring6要求JDK最低版本是JDK17
+
+### 1.5.2、本课程软件版本
+
+(1)  IDEA开发工具：2022.1.2
+(2)  JDK:Java17(Spring6要求DK最低版本是ava17)
+(3)  Spring:6.0.2
+
+
+
+# 2.1 入门开发案例
 
 ![截屏2023-11-22 11.00.24](./assets/截屏2023-11-22 11.00.24.png)
 
 ```java
 package com.test.spring6;
-
-
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -1121,13 +1293,86 @@ jdbc.driver=com.mysql.cj.jdbc.Driver
 | request | 在一个请求范围内有效 |
 | session | 在一个会话范围内有效 |
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    通过scope属性配置单实例,  多实例-->
+    <bean id="orders" class=  "com.test.spring6.iocxml.scope.Orders"
+          scope="singleton">
+    </bean>
+</beans>
+
+package com.test.spring6.iocxml.scope;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestOrders {
+    public static void main(String[] args) {
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("bean-scope.xml");
+        Orders orders = context.getBean("orders", Orders.class);
+        System.out.println(orders);
+        Orders orders1 = context.getBean("orders", Orders.class);
+        System.out.println(orders1);
+    }
+}
+
+org.springframework.beans.factory.support.DefaultListableBeanFactory -Creating shared instance of singleton bean 'orders'
+com.test.spring6.iocxml.scope.Orders@e54303
+com.test.spring6.iocxml.scope.Orders@e54303
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    通过scope属性配置单实例,  多实例-->
+    <bean id="orders" class=  "com.test.spring6.iocxml.scope.Orders"
+          scope="prototype">
+    </bean>
+</beans>
+
+
+package com.test.spring6.iocxml.scope;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestOrders {
+    public static void main(String[] args) {
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("bean-scope.xml");
+        Orders orders = context.getBean("orders", Orders.class);
+        System.out.println(orders);
+        Orders orders1 = context.getBean("orders", Orders.class);
+        System.out.println(orders1);
+    }
+}
+
+2023-11-28 01:16:09 040 [main] DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader -Loaded 1 bean definitions from class path resource [bean-scope.xml]
+com.test.spring6.iocxml.scope.Orders@4612b856
+com.test.spring6.iocxml.scope.Orders@22875539
+```
+
 
 
 #### 3.2.12、实验十一：bean生命周期
 
+
+
+
+
+
+
 #### 3.2.13、实验十二：FactoryBean
 
-#### 3.2.14、实验十三：基于ml自动装配
+#### 3.2.14、实验十三：基于xml自动装配
 
 
 
