@@ -1,2 +1,5 @@
-01:16:08 877 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5a59ca5e
-01:16:09 040 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 1 bean definitions from class path resource [bean-scope.xml]
+22:19:38 283 DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5a59ca5e
+22:19:38 549 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions -Loaded 3 bean definitions from class path resource [bean-auto.xml]
+22:19:38 582 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'userController'
+22:19:38 636 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'userService'
+22:19:38 637 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton -Creating shared instance of singleton bean 'userDao'

@@ -1364,20 +1364,258 @@ com.test.spring6.iocxml.scope.Orders@22875539
 
 #### 3.2.12、实验十一：bean生命周期
 
+1、bean对象创建(调用无参数构造)
+2、给bean对象设置相关属性
+3、bean后置处理器(初始化之前)
+4、bean对象初始化（调用指定初始化方法）
+5、bean后置处理器(初始化之后)
+6、bean对象创建完成了，可以使用了
+7、bean对象销毁(配置指定销毁的方法)
+8、IoC容器关闭了
 
 
 
+```xml
+<!--bean的后置处理器要放入I0C容器才能生效-->
+<bean id="myBeanProcessor"class="com.atguigu.spring6.process.MyBeanprocessor"/>
+```
+
+```java
+package com.test.spring6.iocxml.life;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestUser {
+
+    public static void main(String[] args) {
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("bean-life.xml");
+        User user = context.getBean("user", User.class);
+        System.out.println("6、bean对象创建完成了，可以使用了");
+        System.out.println(user);
+        context.close();
+    }
+}
+
+2023-11-28 22:52:18 779 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -Creating shared instance of singleton bean 'user'
+1. bean对象创建(调用无参数构造)
+2、给bean对象设置相关属性
+3、bean后置处理器(初始化之前)
+user::com.test.spring6.iocxml.life.User@737a135b
+4. bean对象初始化（调用指定初始化方法）
+5、bean后置处理器(初始化之后)
+user::com.test.spring6.iocxml.life.User@737a135b
+6、bean对象创建完成了，可以使用了
+com.test.spring6.iocxml.life.User@737a135b
+2023-11-28 22:52:18 810 [main] DEBUG org.springframework.context.support.ClassPathXmlApplicationContext -Closing org.springframework.context.support.ClassPathXmlApplicationContext@5a59ca5e, started on Tue Nov 28 22:52:18 CST 2023
+7、bean对象销毁(配置指定销毁的方法)
+```
 
 
 
 #### 3.2.13、实验十二：FactoryBean
 
+
+
+FactoryBean是Spring提供的一种整合第三方框架的常用机制。和普通的bean不同，配置一个FactoryBean类型的
+bean,在获取bean的时候得到的并不是class属性中配置的这个类的对象，而是getObject0方法的返回值。通过
+这种机制，Spg可以帮我们把复杂组件创建的详细过程和繁琐细节都屏蔽起来，只把最简洁的使用界面展示给我
+们。
+将来我们整合Mybatis时，Spring就是通过FactoryBean机制来帮我们创建SqlSessionFactoryi对象的。
+
+```java
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package org.springframework.beans.factory;
+
+import org.springframework.lang.Nullable;
+
+public interface FactoryBean<T> {
+    String OBJECT_TYPE_ATTRIBUTE = "factoryBeanObjectType";
+
+    @Nullable
+    T getObject() throws Exception;
+
+    @Nullable
+    Class<?> getObjectType();
+
+    default boolean isSingleton() {
+        return true;
+    }
+}
+```
+
+
+
+2. 重写FactoryBean方法
+
+```java
+package com.test.spring6.iocxml.factorybean;
+
+import org.springframework.beans.factory.FactoryBean;
+
+public class MyFactoryBean implements FactoryBean<User> {
+
+
+    @Override
+    public User getObject() throws Exception {
+        return new User();
+    }
+
+    @Override
+    public Class<?> getObjectType() {
+        return User.class;
+    }
+}
+```
+
+
+
+3.配置bean.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="myFactoryBean" class="com.test.spring6.iocxml.factorybean.MyFactoryBean"></bean>
+</beans>
+```
+
+
+
+4.测试
+
+```java
+package com.test.spring6.iocxml.factorybean;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestUser {
+    public static void main(String[] args) {
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("bean-factorybean.xml");
+        User user = (User) context.getBean("myFactoryBean");
+        System.out.println(user);
+    }
+}
+
+2023-11-28 23:17:00 705 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -Creating shared instance of singleton bean 'user'
+com.test.spring6.iocxml.factorybean.User@49cb9cb5
+```
+
+
+
 #### 3.2.14、实验十三：基于xml自动装配
 
+自动装配：
+根据指定的策略，在IOC容器中匹配一个bean,自动为指定的bean中所依赖的类类型或接口类型属性赋值
 
+![截屏2023-11-28 23.21.02](./assets/截屏2023-11-28 23.21.02.png)
+
+需求:实现dao实例对象的自动装配
+
+![截屏2023-11-28 23.42.21](./assets/截屏2023-11-28 23.42.21.png)
+
+使用bean标签的autowire.属性设置自动装配效果
+
+自动装配方式：byType
+
+ byType:根据类型匹配lOC容器中的某个兼容类型的bean,为属性自动赋值
+
+若在IOC中，没有任何个兼容类型的bean能够为属性赋值，则该属性不装配，即值为默认值null
+
+若在IOC中，有多个兼容类型的bean能的够为属性赋值，则抛出异常NoUniqueBeanDefinitionException
+
+```xml
+<!--    根据类型自动装配-->
+    <bean id="userController" class="com.test.spring6.iocxml.auto.controller.UserController"
+          autowire="byType">
+    </bean>
+
+    <bean id="userService" class="com.test.spring6.iocxml.auto.service.UserServiceImpl"
+          autowire="byType">
+    </bean>
+
+    <bean id="userDao" class="com.test.spring6.iocxml.auto.dao.UserDaoImpl">
+    </bean>
+```
+
+
+
+```xml
+<!--    根据名称自动装配-->
+        <bean id="userController" class="com.test.spring6.iocxml.auto.controller.UserController"
+              autowire="byName">
+        </bean>
+        <bean id="userService" class="com.test.spring6.iocxml.auto.service.UserServiceImpl"
+              autowire="byName">
+        </bean>
+        <bean id="userDao" class="com.test.spring6.iocxml.auto.dao.UserDaoImpl">
+        </bean>
+```
+
+根据名称自动装配,需要保证bean的名称和属性中的名字一致
+
+```
+    private UserDao userDao;
+    <bean id="userDao" class="com.test.spring6.iocxml.auto.dao.UserDaoImpl">
+        </bean>
+```
 
 
 
 ## 3.3、基于注解管理bean(*)
 
-3.1.3、IoC容器在Spring的实现
+​	从Java5开始，Java增加了对注解(Annotation)的支持，它是代码中的一种特殊标记，可以在编译、类加载和运行时被读取，执行相应的处理，开发人员可以通过注解在不改变原有代码和逻辑的情况下，在源代码中嵌入补充信息	
+
+```
+注解
+就是代码中的特殊标记
+格式:
+@注解名称(属性1=属性值)
+使用范围:
+可以使用在类上面,属性上面,方法上面
+```
+
+​	Spring从2.5版本开始提供了对注解技术的全面支持，我们可以使用注解来实现自动装配，简化Spring的XML配置。
+
+Spring通过注解实现自动装配的步骤如下：
+
+1. 引入依赖
+
+2. 开启组件扫描
+
+   ```xml
+   
+   ```
+
+   
+
+3. 使用注解定义Bean
+
+
+
+4. 依赖注入
+
+
+
+3.3.1、搭建子摸块spring6-ioc-annotation
+
+①搭建模块
+搭建方式如：spring6-ioc-xm
+
+②引入配置文件
+
+引入spring-ioc-xml模块日志log4j2.xml
+
+③添加依赖
+
+```
+
+```
+
