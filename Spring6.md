@@ -1590,15 +1590,7 @@ Spring通过注解实现自动装配的步骤如下：
 
 2. 开启组件扫描
 
-   ```xml
-   
-   ```
-
-   
-
 3. 使用注解定义Bean
-
-
 
 4. 依赖注入
 
@@ -1617,5 +1609,324 @@ Spring通过注解实现自动装配的步骤如下：
 
 ```
 
+```
+
+
+
+**3.3.2 开启组件扫描**
+
+Spring默认不使用注解装配Bean,因此我们需要在Spring的XML配置中，通过context:component-scan元素
+开启Spring Beans的自动扫描功能。开启此功能后，Spring会自动从扫描指定的包(base-package属性设置)
+及其子包下的所有类，如果类上使用了@Component注解，就将该类装配到容器中。
+
+方式一:最基本的扫描方式
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--开启组件扫描-->
+    <context:component-scan base-package="com.test"></context:component-scan>
+</beans>
+```
+
+
+
+方式二: 指定要排除的组件
+
+```xml
+<context:component-scan base-package="com.test.spring6">
+        <!--context:exc1ude-fi1ter标签：指定排除规则-->
+        <!--
+        type:设置排除或包含的依据
+        type="annotation",根据注解排除，expression中设置要排除的注解的全类名
+        type="assignable",根据类型排除，expression中设置要排除的类型的全类名
+        -->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <!--<context:exclude-filter type="assignable"
+        expression="com.atguigu.spring6.controller.Usercontroller"/>-->
+    </context:component-scan>
+```
+
+
+
+方式三: 仅扫描指定组件
+
+```xml
+<context:component-scan base-package="com.atguigu"use-default-filters="false">
+			<!--context:inc1ude-fi1ter标签：指定在原有扫描规则的基础上追加的规则-->
+			<!--use-default-fi1ters属性：取值fa1se表示关闭默认扫描规则-->
+			<!--此时必须设置use-defau1t-fi1ters="fa1se",因为默认规则即扫描指定包下所有类-->
+			<!--
+				type:设置排除或包含的依据
+				type="annotation",根据注解排除，expression中设置要排除的注解的全类名
+				type="assignable",根据类型排除，expression中设置要排除的类型的全类名
+			-->
+			<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller"/>
+			<!--<context:include-filter type="assignable"
+				expression="com.atguigu.spring6.controller.Usercontroller"/>-->
+</context:component-scan>
+```
+
+
+
+**3.3.3, 使用注解定义bean**
+
+Spring提供了以下多个注解,这些注解可以直接标注在Java类上,将他们定义成spring bean
+
+| 注解        | 说明                                                         |
+| ----------- | ------------------------------------------------------------ |
+| @Component  | 该注解用于描述Spring中的Bean,它是一个泛化的概念，仅仅表示容器中的一个组件(Bean), 并且可以作用在应用的任何层次，例如Service层、Dao层等。使用时只需将该注解标注在相应类上即可。 |
+| @Repository | 该注解用于将数据访问层(Dao层)的类标识为Spring中的Bean,其功能与@Component相同. |
+| @Service    | 该注解通常作用在业务层(Service层)，用于将业务层的类标识为Spring中的Bean,其功能与@Component相同， |
+| @Controller | 该注解通常作用在控制层（如SpringMVC的Controller),用于将控制层的类标识为<br/>Spring中的Bean,其功能与@Component相同。 |
+
+```java
+package com.test.spring6.bean;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+//类似于<bean id="user"class="...">
+//属性默认为首字母的小写
+//@Component(value = "user")
+//public class User {
+//}
+//@Repository
+//@Service
+@Controller
+public class User {
+}
+```
+
+3.3.4、实验一：@Autowired注入
+
+单独使用@Autowired注解，默认根据类型装配。【默认是byType】,类似于XML的自动装配
+
+```java
+package org.springframework.beans.factory.annotation;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+//元注解
+@Target([ElementType.CONSTRUCTOR,ElementType.METHOD,ElementType.PARAMETER,ElementType.FIELD,ElementType.ANNOTATION_TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Autowiredboolean required()default true;
+```
+
+源码中有两处需要注意:
+
+* 第一处：该注解可以标注在哪里？
+
+  * 构造方法上
+
+  * 方法上
+
+  * 形参上
+
+  * 属性上
+
+  *  注解上
+
+* 第二处：该注解有一个required,属性，默认值是true,表示在注入的时候要求被注入的Bean必须是存在的
+  如果不存在则报错。如果required属性设置为false,表示注入的Bean存在或者不存在都没关系，存在的话就
+  注入，不存在的话，也不报错。
+
+①场景一：属性注入
+
+创建UserDao
+
+```java
+package com.test.spring6.autowired.dao;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserDaoImpl implements UserDao{
+
+    @Override
+    public void add() {
+        System.out.println("Dao.....");
+    }
+}
+
+```
+
+创建UserService
+
+```java
+package com.test.spring6.autowired.service;
+
+import com.test.spring6.autowired.dao.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImpl implements UserService {
+    // 注入dao
+    // 第一种方式 属性注入
+    // @Autowired
+    // private UserDao userDao;
+
+    //第二种方式 set注入
+    //private UserDao userDao;
+
+    //@Autowired
+    //public void setUserDao(UserDao userDao) {
+    //    this.userDao = userDao;
+    //}
+
+    //第三中方式 构造方法注入
+    //private UserDao userDao;
+
+    //@Autowired
+    //public UserServiceImpl(UserDao userDao) {
+    //    this.userDao = userDao;
+    //}
+
+    //第四种方式 形参上注入
+    //private UserDao userDao;
+    //
+    //public UserServiceImpl(@Autowired UserDao userDao) {
+    //    this.userDao = userDao;
+    //}
+
+    //方式五 只有一个有参数构造函数,无注解
+    @Autowired
+    @Qualifier(value = "userRedisDaoImpl")
+    private UserDao userDao;
+
+    @Override
+    public void add() {
+        System.out.println("service....");
+        userDao.add();
+    }
+}
+```
+
+创建UserController
+
+```java
+package com.test.spring6.autowired.controller;
+
+import com.test.spring6.autowired.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class UserController {
+
+    // 注入 service
+    // 第一种方式 属性注入
+//    @Autowired //这个注解会根据对应的类型找到对应的对象
+//    private UserService userService;
+
+    //第二种方式 set注入
+    //private UserService userService;
+    //@Autowired
+    //public void setUserService(UserService userService) {
+    //    this.userService = userService;
+    //}
+
+    //第三种方式 构造方法上注入
+    //private UserService userService;
+    //
+    //public UserController(UserService userService) {
+    //    this.userService = userService;
+    //}
+
+    //第四种方式 形参上注入
+
+    //private UserService userService;
+//
+    //public UserController(@Autowired UserService userService) {
+    //    this.userService = userService;
+    //}
+
+    //第五方式 只有一个有参数构造函数,无注解
+    //private UserService userService;
+//
+    //public UserController(UserService userService) {
+    //    this.userService = userService;
+    //}
+    ////如果有其他的构造方法就会报错
+    ////public UserController() {
+    ////}
+
+    //最后一种方式 两个注解 根据名称注入
+    @Autowired
+    private UserService userService;
+
+
+    public void add() {
+        System.out.println("controller.......");
+        userService.add();
+    }
+
+}
+
+```
+
+②场景二：set注入
+
+③场景三：构造方法注入
+
+④场景四：形参上注入
+
+⑤场景五：只有一个构造函数，无注解
+当有参数的构造方法只有一个时，@Autowiredi注解可以省略。
+说明：有多个构造方法时呢？大家可以测试（再添加一个无参构造函数），测试报错
+
+⑥场景六：@Autowired注解和@Qualifier注解联合
+
+添加Dao层的实现就会出错
+
+```java
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.test.spring6.autowired.dao.UserDao' available: expected single matching bean but found 2: userDaoImpl,userRedisDaoImpl //因为有两个实现类,根据类型进行注入的话,就确定实现类,需要加上@Qualifier进行注入
+```
+
+错误信息中说：不能装配，UserDao这个Bean的数量等于2
+怎么解决这个问题呢？当然要byName,根据名称进行装配了。
+
+
+
+3.3.5 实验二：@Resource注入
+
+@Resource注解也可以完成属性注入。那它和@Autowired注解有什么区别?
+
+* @Resource注解是DK扩展包中的，也就是说属于JDK的一部分。所以该注解是标准注解，更加具有通用性。
+
+  (JSR-250标准中制定的注解类型。JSR是ava规范提案。)
+
+* @Autowired注解是Spring框架自己的。
+* @Resource注解默认根据名称装配byName,未指定name时，使用属性名作为name。通过name找不到的话会自动启动通过类型byType装配。
+* @Autowired注解默认根据类型装配byType,如果想根据名称装配，需要配合@Qualifier注解一起用。·
+* @Resource注解用在属性上、setter方法上。
+* @Autowiredi注解用在属性上、setter方法上、构造方法上、构造方法参数上.
+
+@Resource注解属于JDK扩展包，所以不在JDK当中，需要额外引入以下依赖：
+
+【如果是JDK8的话不需要额外引入依赖。高于JDK11或低于JDK8需要引入以下依赖。】
+
+```xml
+<dependency>
+  	<groupId>jakarta.annotation</groupId>
+  	<artifactId>jakarta.annotation-api</artifactId>
+  	<version>2.1.1</version>
+</dependency>
 ```
 

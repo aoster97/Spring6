@@ -4,30 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_28">
-      <change afterPath="$PROJECT_DIR$/../assets/image-20231122000731692.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assets/image-20231122001254936.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assets/截屏2023-11-28 23.21.02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assets/截屏2023-11-28 23.42.21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/auto/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/auto/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/auto/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/auto/dao/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/auto/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/auto/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/factorybean/MyFactoryBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/factorybean/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/factorybean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/life/MyBeanPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/life/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/test/spring6/iocxml/life/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-auto.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-factorybean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/bean-life.xml" afterDir="false" />
+    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_29">
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/TestUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/dao/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/dao/UserRedisDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/bean/TestUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/bean/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-di.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-diarray.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-dilist.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-dimap.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-diref.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-ditest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-jdbc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-scope.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/TestUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/PersonDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/TestUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/UserDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/di/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/di/TestBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Lesson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/TestStu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Dept.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Emp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestDept.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestEmp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestJdbc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/jdbc/TestJdbc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/scope/Orders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/scope/TestOrders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/log4j2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring6_log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring6_log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/test.log" afterDir="false" />
     </list>
@@ -39,8 +60,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="spring-beans.schema" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -90,30 +111,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.13351136" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.test.spring6.iocxml.ditest" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestUser (2)">
-    <configuration name="TestOrders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.scope.TestOrders" />
-      <module name="spring6-ioc-xml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.spring6.iocxml.scope.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TestUserController">
     <configuration name="TestUser (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.factorybean.TestUser" />
       <module name="spring6-ioc-xml" />
@@ -140,12 +152,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestUser (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.bean.TestUser" />
+      <module name="spring6-ioc-annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.spring6.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.life.TestUser" />
       <module name="spring6-ioc-xml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.test.spring6.iocxml.life.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.spring6.autowired.TestUserController" />
+      <module name="spring6-ioc-annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.spring6.autowired.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,29 +202,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestJdbc.demo2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-ioc-xml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.spring6.iocxml.jdbc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.test.spring6.iocxml.jdbc" />
-      <option name="MAIN_CLASS_NAME" value="com.test.spring6.iocxml.jdbc.TestJdbc" />
-      <option name="METHOD_NAME" value="demo2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestUserController" />
+        <item itemvalue="Application.TestUser (3)" />
         <item itemvalue="Application.TestUser (2)" />
         <item itemvalue="Application.TestUser (1)" />
         <item itemvalue="Application.TestUser" />
-        <item itemvalue="Application.TestOrders" />
-        <item itemvalue="JUnit.TestJdbc.demo2" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +230,11 @@
       <workItem from="1700838829684" duration="7151000" />
       <workItem from="1701101705571" duration="7412000" />
       <workItem from="1701266880404" duration="26000" />
-      <workItem from="1701266923903" duration="1265000" />
+      <workItem from="1701266923903" duration="3942000" />
+      <workItem from="1701324040620" duration="23000" />
+      <workItem from="1701351581616" duration="2544000" />
+      <workItem from="1701425106892" duration="39000" />
+      <workItem from="1701441691566" duration="5240000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
@@ -294,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701163540954</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2023_11_29">
+      <created>1701268993776</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701268993776</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +352,11 @@
     <MESSAGE value="2023_11_24" />
     <MESSAGE value="2023_11_26" />
     <MESSAGE value="2023_11_28" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023_11_28" />
+    <MESSAGE value="2023_11_29" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023_11_29" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
