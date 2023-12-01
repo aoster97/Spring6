@@ -4,54 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_11_29">
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/TestUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/dao/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/dao/UserRedisDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/autowired/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/bean/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/bean/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring6.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring6.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources/bean.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-di.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-diarray.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-dilist.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-dimap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-diref.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-ditest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-jdbc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean-scope.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/bean.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/TestUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/PersonDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/TestUserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/bean/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/di/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/di/TestBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Lesson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/dimap/TestStu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Dept.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/Emp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestDept.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestEmp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/ditest/TestJdbc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/jdbc/TestJdbc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/scope/Orders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/com/test/spring6/iocxml/scope/TestOrders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-xml/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring6_log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring6_log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/../spring6_log/test.log" afterDir="false" />
-    </list>
+    <list default="true" id="6a8d567c-636b-406f-8f3b-2a50f2d16841" name="Default Changelist" comment="2023_12_01" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/resource" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.13351136" />
@@ -119,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/test/spring6/resource" />
       <recent name="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -234,7 +188,7 @@
       <workItem from="1701324040620" duration="23000" />
       <workItem from="1701351581616" duration="2544000" />
       <workItem from="1701425106892" duration="39000" />
-      <workItem from="1701441691566" duration="5240000" />
+      <workItem from="1701441691566" duration="5826000" />
     </task>
     <task id="LOCAL-00001" summary="2023_11_21">
       <created>1700645504572</created>
@@ -327,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701268993776</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="2023_12_01">
+      <created>1701449850705</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701449850705</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +314,8 @@
     <MESSAGE value="2023_11_26" />
     <MESSAGE value="2023_11_28" />
     <MESSAGE value="2023_11_29" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023_11_29" />
+    <MESSAGE value="2023_12_01" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023_12_01" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
